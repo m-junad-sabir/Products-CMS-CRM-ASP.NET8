@@ -1,0 +1,486 @@
+# ============================================================================
+# ASP.NET Core 8.0 Razor Pages Application - .gitignore
+# ============================================================================
+# This file specifies intentionally untracked files to ignore
+# Generated on: 2024
+# Project: Products Management CMS/CRM Application
+# ============================================================================
+
+# ============================================================================
+# BUILD & COMPILATION
+# ============================================================================
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+*.DotSettings
+*.DotSettings.user
+
+# ============================================================================
+# NuGet & PACKAGE MANAGEMENT
+# ============================================================================
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# NuGet Directory
+.nuget/
+packages/
+.packages/
+
+# Package Manager
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ============================================================================
+# ENTITY FRAMEWORK & MIGRATIONS
+# ============================================================================
+
+# Entity Framework migrations
+Migrations/
+**/Migrations/*.cs
+**/Migrations/*.Designer.cs
+
+# EF Core DbContext snapshots
+**/obj/Debug/net8.0/*ContextModelSnapshot.cs
+
+# Database files
+*.mdf
+*.ldf
+*.mdb
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# ============================================================================
+# VISUAL STUDIO
+# ============================================================================
+
+# Visual Studio files
+.sln
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.csproj.user
+*.vbproj.user
+*.suo
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# ============================================================================
+# RUNTIME & APPLICATION FILES
+# ============================================================================
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# .NET runtime
+.dotnet/
+dotnet
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Local user-specific files
+local_settings.json
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+# Application logs
+logs/
+logs/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================================
+# OPERATING SYSTEM
+# ============================================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+.DS_Store
+Desktop.ini
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfsxxxx*
+
+# ============================================================================
+# ENVIRONMENT & CONFIGURATION
+# ============================================================================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Secrets (never commit sensitive data)
+secrets.json
+appsettings.Secrets.json
+appsettings.*.Secrets.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+
+# Configuration files with sensitive data
+web.config
+web.*.config
+!web.Release.config
+
+# ============================================================================
+# TEMPORARY & CACHE FILES
+# ============================================================================
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+*.swo
+*.swn
+
+# Temporary directories
+tmp/
+temp/
+cache/
+
+# Windows temporary files
+$RECYCLE.BIN/
+*.cab
+
+# ============================================================================
+# IDE & EDITOR
+# ============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+jsconfig.json
+.eslintignore
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# IntelliJ IDEA
+*.iml
+*.iws
+*.ipr
+out/
+
+# Netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+local.properties
+
+# ============================================================================
+# WEB & FRONT-END
+# ============================================================================
+
+# Node.js & npm
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Bower
+bower_components/
+.bower-cache
+.bower-registry
+.bowerrc
+
+# TypeScript
+*.ts.map
+tsconfig.json.bak
+
+# Webpack
+dist/
+.webpack/
+
+# ============================================================================
+# TEST & COVERAGE
+# ============================================================================
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+TestResults/
+OpenCover/
+
+# Code coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# xUnit test results
+xunit.runner.visualstudio.testadapter
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+
+# API documentation
+docs/_build/
+docs/.buildinfo
+site/
+
+# Help files
+*.HxT
+*.HxC
+*.hhc
+*.hhk
+*.hhp
+*.hlp
+*.hxc
+*.hxf
+*.hxi
+*.hxq
+*.hxr
+*.hxs
+*.hxv
+*.hxw
+*.hxx
+*.i
+*.icproj
+*.ism
+*.ism
+*.ist
+
+# ============================================================================
+# DATABASE & DATA FILES
+# ============================================================================
+
+# SQL Server
+App_Data/
+*.mdf
+*.ldf
+*.mdb
+*.accdb
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# MySQL
+.env.mysql
+dump.sql
+
+# MongoDB
+.env.mongodb
+
+# CSV & Excel
+*.csv
+*.xlsx
+*.xls
+
+# ============================================================================
+# AZURE & CLOUD
+# ============================================================================
+
+# Azure
+.azure/
+azure-pipelines.yml.bak
+local.settings.json
+.env.azure
+
+# AWS
+.aws/
+credentials
+.aws/credentials
+
+# Google Cloud
+.gcloud/
+google-cloud-key.json
+
+# ============================================================================
+# DOCKER
+# ============================================================================
+
+# Docker
+.dockerignore
+Dockerfile.bak
+docker-compose.override.yml
+.env.docker
+
+# Docker build artifacts
+docker-build/
+
+# ============================================================================
+# GIT
+# ============================================================================
+
+# Git
+.git/
+.gitmodules
+.gitattributes.bak
+
+# ============================================================================
+# ADDITIONAL ARTIFACTS
+# ============================================================================
+
+# Windows shortcuts
+*.lnk
+
+# LibreOffice locks
+.~lock.*
+
+# Backup files
+*.backup
+*.bkp
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archive files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.tar.gz
+
+# ============================================================================
+# SPECIFIC TO THIS PROJECT
+# ============================================================================
+
+# SQL scripts (optionally ignore if stored elsewhere)
+# SQL/
+
+# Publish directory
+PublishProfiles/
+Properties/PublishProfiles/
+
+# Application insights
+ApplicationInsights.config
+.ai/
+
+# User-specific data
+UserData/
+UploadedFiles/
+temp_uploads/
+
+# Generated files from Razor Pages
+Pages/Products/*.cshtml.g.cs
+Pages/Products/*.cshtml.c.css
+
+# BundlerMinifier
+bundleconfig.json.bak
+
+# ============================================================================
+# DOCUMENTATION NOTES
+# ============================================================================
+#
+# Common patterns to consider excluding:
+# - /dist/           : Compiled/bundled output
+# - /build/          : Build output
+# - /.next/          : Next.js output
+# - /coverage/       : Test coverage reports
+# - npm-debug.log    : NPM debug logs
+# - yarn-error.log   : Yarn error logs
+#
+# ============================================================================

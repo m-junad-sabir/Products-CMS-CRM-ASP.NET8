@@ -1,0 +1,444 @@
+﻿@page
+@model ProductsProjectCRUD.Pages.ProductsByCategory.IndexModel
+@{
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+
+        <meta name="viewport" content="width=device-width" />
+
+        <title></title>
+    	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                overflow: auto;
+            }
+
+            .table_header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+                background-color: rgb(240,240,240);
+            }
+            .table_section {
+                overflow: auto;
+                height: 38vh;
+                
+            }
+            table {
+                width:100%;
+                table-layout: fixed;
+                min-width:900px;
+                border-collapse: collapse;
+            }
+            thead th {
+                position: sticky;
+                top: 0;
+                background-color: #f6f9fc;
+                color: #8493a5;
+                font-size: 15px;
+            }
+            thead {
+                background-color: #f6f9fc;
+            }
+            tbody tr {
+                font-size: 15px;
+            }
+            th, td {
+                border-bottom: 1px solid #dddddd;
+                <!--padding: 10px 20px;-->
+                word-break: break-all;
+                text-align: center;
+            }
+
+            tr:hover td {
+                color: #0298cf;
+                background-color:#f6f9fc;
+            }
+
+            button {
+                outline: none;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                padding: 9px;
+                color: white;
+            }
+            td a button:nth-child(1) {
+                background-color:#0298cf;
+            }
+
+            td a button:nth-child(2) {
+                background-color: #ffff00;
+            }
+
+            td a button:nth-child(3) {
+                background-color:#f80000;
+            }
+            #btn_one{
+                background-color: #0298cf;
+            }
+            #btn_two {
+                background-color: #ffff00;
+                color: black;
+            }
+            #btn_three {
+                background-color: #f80000;
+            }
+            ::-webkit-scrollbar-track{
+                box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+            }
+            ::-webkit-scrollbar-thumb{
+                box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+            }
+
+            .pagination {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                padding:6px 20px;
+                background-color: #8493a5;
+            }
+
+            .pagination div{
+                padding: 10px;
+                border: 2px solid #d5d0d0;
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #0298cf;
+                color: #ffffff;
+                box-shadow: 0px 0px 4px 0px rgba(0,0,0.5);
+                margin: 0 5px;
+            }
+        </style>
+        
+    
+    </head>
+
+
+
+    <body>
+
+
+    <h3 class="text-3xl font-bold text-gray-800 mb-6">Product Catalog Filtering</h3>
+
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+            <!-- Supplier Dropdown -->
+            <div>
+                <label for="supplierSelect" class="block text-sm font-medium text-gray-700 mb-1">Select Supplier:</label>
+                <select id="supplierSelect" asp-for="SelectedSupplierId" asp-items="Model.Suppliers"
+                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                    <option value="">-- Select Supplier --</option>
+                </select>
+            </div>
+
+            <!-- Category Dropdown -->
+            <div>
+                <label for="categorySelect" class="block text-sm font-medium text-gray-700 mb-1">Select Category:</label>
+                <select id="categorySelect" asp-for="SelectedCategoryId" asp-items="Model.Categories"
+                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" disabled>
+                    <option value="">-- Select Category --</option>
+                </select>
+            </div>
+
+            <!-- Product Dropdown -->
+            <div>
+                <label for="productSelect" class="block text-sm font-medium text-gray-700 mb-1">Select Product:</label>
+                <select id="productSelect" asp-for="SelectedProductId" asp-items="Model.ProductsDropdown"
+                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" disabled>
+                    <option value="">-- Select Product --</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="" style="padding: 0px 0px 0px 0px;">
+
+        <div class="table_header">
+            <h3>Product Table data using ADO.NET and Jquery</h3>
+            <a asp-page="./Create" class="btn btn-success">
+                Create New Product
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="table_section">
+
+        <table class="table table-responsive table-striped">
+
+            <thead class="bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Product Name
+                    </th>
+                    <th scope="col" class="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Category
+                    </th>
+                    <th scope="col" class="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Supplier
+                    </th>
+                    <th scope="col" class="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Unit Price
+                    </th>
+                    <th scope="col" class="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        In Stock
+                    </th>
+                    <th scope="col" class=" ">
+                        Actions
+                    </th>
+                    
+                </tr>
+            </thead>
+
+
+            <tbody id="productTableBody" class="bg-white divide-y divide-gray-200">
+
+                <tr id="noProductsRow">
+                    <td colspan="6" class="px-2 py-2 whitespace-nowrap text-center text-sm text-gray-500">
+                        Select options from dropdowns to view products.
+                    </td>
+                    
+                </tr>
+            
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+    <div class="pagination">
+
+        <div><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
+        <div><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+        <div>1</div>
+        <div>2</div>
+        <div><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></div>
+        <div><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+
+    </div>
+
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var supplierSelect = $('#supplierSelect');
+                var categorySelect = $('#categorySelect');
+                var productSelect = $('#productSelect');
+                var productTableBody = $('#productTableBody');
+
+                // Initial state: disable category and product dropdowns
+                // And ensure the "no products" message is visible initially
+                categorySelect.prop('disabled', true).empty().append('<option value="">-- Select Category --</option>');
+                productSelect.prop('disabled', true).empty().append('<option value="">-- Select Product --</option>');
+                // No need to call renderProductTable here, as the initial HTML contains the message.
+
+                // Function to populate a dropdown
+                function populateDropdown(dropdownElement, data, defaultOptionText, defaultValue) {
+                    dropdownElement.empty();
+                    dropdownElement.append($('<option></option>').val(defaultValue).text(defaultOptionText));
+                    $.each(data, function (i, item) {
+                        dropdownElement.append($('<option></option>').val(item.id).text(item.text));
+                    });
+                }
+
+                // Function to render product rows into the table
+                function renderProductTable(products) {
+                    productTableBody.empty(); // Clear existing rows
+                    if (products && products.length > 0) { // Add null/undefined check for 'products' array
+                        $.each(products, function (i, product) {
+                            // Ensure your JavaScript property names match the JSON casing from your server
+                            // After configuring camelCase in Startup.cs: product.propertyName (camelCase)
+                            // If Startup.cs camelCase isn't working: product.PropertyName (PascalCase)
+                            // You'll need to check the actual JSON response in browser's Network tab again
+                            // after making these changes to confirm casing.
+                            var row = `
+                                <tr>
+                                    <td class="px-2 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
+                                        ${product.productName || ''}
+                                    </td>
+                                    <td class="px-2 py-2 whitespace-nowrap text-sm text-gray-500">
+                                        ${product.categoryName || ''}
+                                    </td>
+                                    <td class="px-2 py-2 whitespace-nowrap text-sm text-gray-500">
+                                        ${(product.supplierName || '')}
+                                    </td>
+                                    <td class="px-2 py-2 whitespace-nowrap text-sm text-gray-500">
+                                        ${(product.unitPrice || 0).toFixed(2)}
+                                    </td>
+                                    <td class="px-2 py-2 whitespace-nowrap text-sm text-gray-500">
+                                        ${product.unitsInStock || 0}
+                                    </td>
+                                    <td class="">
+                                        <a style="text-decoration:none" href="/Products/Edit?id=${product.productId}">
+                                            <button id="btn_one" class="text-indigo-600 hover:text-indigo-900 mx-2">
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> 
+                                            </button>
+                                        </a> |
+
+                                        <a style="text-decoration:none" href="/Products/Details?id=${product.productId}">
+                                            <button id="btn_two" class="text-blue-600 hover:text-blue-900 mx-2">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i> 
+                                            </button>
+                                        </a> |
+
+                                        <a style="text-decoration:none" href="/Products/Delete?id=${product.productId}">
+                                            <button id="btn_three" class="text-red-600 hover:text-red-900 mx-2">
+                                                <i class="fa fa-trash" aria-hidden="true"></i> 
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            `;
+                            productTableBody.append(row);
+                        });
+                    } else {
+                        productTableBody.append(`
+                            <tr id="noProductsRow">
+                                <td colspan="6" class="px-2 py-2 whitespace-nowrap text-center text-sm text-gray-500">
+                                    No products found for the selected criteria.
+                                </td>
+                            </tr>
+                        `);
+                    }
+                }
+
+
+
+                // ----------------------------------------------------------------------- //
+                // ----------------------------------------------------------------------- //
+                // Event handler for Supplier dropdown change
+                supplierSelect.change(function () {
+                    var supplierId = $(this).val();
+                    categorySelect.prop('disabled', true).empty().append('<option value="">-- Select Category --</option>');
+                    productSelect.prop('disabled', true).empty().append('<option value="">-- Select Product --</option>');
+                    renderProductTable([]); // Clear table
+
+                    if (supplierId) {
+                        $.getJSON('?handler=CategoriesForSupplier', { supplierId: supplierId })
+                            .done(function (data) {
+                                populateDropdown(categorySelect, data, '-- Select Category --', '');
+                                categorySelect.prop('disabled', false);
+                            })
+                            .fail(function (jqXHR, textStatus, errorThrown) {
+                                console.error("Error fetching categories: " + textStatus, errorThrown);
+                                alert("Error fetching categories. Please try again.");
+                            });
+                    }
+                 });
+
+
+
+
+                // ----------------------------------------------------------------------- //
+                // ----------------------------------------------------------------------- //
+                // Event handler for Category dropdown change
+                categorySelect.change(function () {
+                    var supplierId = supplierSelect.val();
+                    var categoryId = $(this).val();
+                    productSelect.prop('disabled', true).empty().append('<option value="">-- Select Product --</option>');
+                    renderProductTable([]); // Clear table and show 'No products found' message
+
+                    if (supplierId && categoryId) {
+                        $.getJSON('?handler=ProductsForCategoryAndSupplier', { supplierId: supplierId, categoryId: categoryId })
+                            .done(function (data) {
+                                // 'data' now contains the full list of Product objects from the server
+                                // We need to transform it for the 'productSelect' dropdown
+                                var productsForDropdown = data.map(product => ({
+                                    id: product.productId,   // Assuming camelCase from Startup.cs
+                                    text: product.productName // Assuming camelCase from Startup.cs
+                                }));
+
+                                populateDropdown(productSelect, productsForDropdown, '-- Select Product --', '');
+                                productSelect.prop('disabled', false);
+
+                                // Now, use the original 'data' (full product objects) to render the table
+                                renderProductTable(data);
+                            })
+                            .fail(function (jqXHR, textStatus, errorThrown) {
+                                console.error("Error fetching products: " + textStatus, errorThrown);
+                                alert("Error fetching products. Please try again.");
+                            });
+                    }
+                 });
+
+
+
+                // ----------------------------------------------------------------------- //
+                // ----------------------------------------------------------------------- //
+                // Event handler for Product dropdown change
+
+                productSelect.change(function () {
+                    var productId = $(this).val();
+                    if (productId) {
+                        // Fetch details for the single selected product
+                        $.getJSON('/Products/Index?handler=ProductDetails', { productId: productId })
+                            .done(function (data) {
+                                // 'data' here should be a single full Product object
+                                if (data) {
+                                    renderProductTable([data]); // Wrap the single product in an array for renderProductTable
+                                } else {
+                                    renderProductTable([]); // Clear table if product not found
+                                }
+                            })
+                            .fail(function (jqXHR, textStatus, errorThrown) {
+                                console.error("Error fetching product details: " + textStatus, errorThrown);
+                                alert("Error fetching product details. Please try again.");
+                            });
+                    } else {
+                        // If "Select Product" is chosen, revert to showing all products for selected supplier/category
+                        var supplierId = supplierSelect.val();
+                        var categoryId = categorySelect.val();
+                        if (supplierId && categoryId) {
+                            $.getJSON('?handler=ProductsForCategoryAndSupplier', { supplierId: supplierId, categoryId: categoryId })
+                                .done(function (data) {
+                                    // 'data' here will be the array of full products
+                                    renderProductTable(data);
+                                })
+                                .fail(function (jqXHR, textStatus, errorThrown) {
+                                    console.error("Error fetching products for table: " + textStatus, errorThrown);
+                                    alert("Error fetching products for table. Please try again.");
+                                });
+                        } else {
+                            renderProductTable([]); // Clear table if selections are incomplete
+                        }
+                    }
+                 });
+
+
+
+
+
+            });
+
+        </script>
+    
+        }
+
+    </body>
+
+
+
+</html>
