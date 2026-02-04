@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|c:\\junaid\\projects_data_nespak\\practice-r-and-d-dotnet8\\productsprojectcrud\\productsprojectcrud\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|solutionrelative:productsprojectcrud\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|c:\\junaid\\projects_data_nespak\\practice-r-and-d-dotnet8\\productsprojectcrud\\productsprojectcrud\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|solutionrelative:productsprojectcrud\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|c:\\junaid\\projects_data_nespak\\practice-r-and-d-dotnet8\\productsprojectcrud\\productsprojectcrud\\pages\\aboutme.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|solutionrelative:productsprojectcrud\\pages\\aboutme.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|c:\\junaid\\projects_data_nespak\\practice-r-and-d-dotnet8\\productsprojectcrud\\productsprojectcrud\\pages\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|solutionrelative:productsprojectcrud\\pages\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 199,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProductsProjectCRUD\\Pages\\Products\\Index.cshtml",
+              "ToolTip": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\Products\\Index.cshtml",
+              "RelativeToolTip": "ProductsProjectCRUD\\Pages\\Products\\Index.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAALEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-04T08:27:59.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AboutMe.cshtml",
+              "DocumentMoniker": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\AboutMe.cshtml",
+              "RelativeDocumentMoniker": "ProductsProjectCRUD\\Pages\\AboutMe.cshtml",
+              "ToolTip": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\AboutMe.cshtml",
+              "RelativeToolTip": "ProductsProjectCRUD\\Pages\\AboutMe.cshtml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAABQAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-04T08:26:46.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProductsProjectCRUD\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\Index.cshtml",
+              "RelativeToolTip": "ProductsProjectCRUD\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJ0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-04T08:25:59.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProductsProjectCRUD\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProductsProjectCRUD\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAArwHQAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-04T08:23:02.631Z",
+              "EditorCaption": ""
             }
           ]
         }

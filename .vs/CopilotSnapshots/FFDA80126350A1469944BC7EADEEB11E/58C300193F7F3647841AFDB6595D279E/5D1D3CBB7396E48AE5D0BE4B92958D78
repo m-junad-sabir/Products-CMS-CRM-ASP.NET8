@@ -1,0 +1,182 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "About Me";
+}
+
+<!-- Hero Section -->
+<section class="py-12 md:py-20 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Left Content -->
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">Welcome to Products CMS</h1>
+            <p class="text-lg text-base-content/80 mb-6">
+                A modern, efficient Content Management and Resource System built with cutting-edge technologies to help you manage your product catalog with ease.
+            </p>
+            
+            <div class="space-y-4 mb-8">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Easy Product Management</h3>
+                        <p class="text-gray-300">Create, read, update, and delete products with an intuitive interface.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Fast & Responsive</h3>
+                        <p class="text-gray-300">Built for speed with responsive design that works on all devices.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Secure & Reliable</h3>
+                        <p class="text-gray-300">Enterprise-grade security with modern authentication mechanisms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-x-4">
+                <a asp-page="/Products/Index" class="btn btn-primary">View Product Catalog</a>
+                <a asp-page="/ProductsByCategory/Index" class="btn btn-outline btn-primary">Query Products</a>
+            </div>
+        </div>
+
+        <!-- Right Image/Illustration -->
+        <div class="hidden md:flex items-center justify-center">
+            <div class="w-full max-w-md">
+                <svg class="w-full h-auto text-primary/20" fill="currentColor" viewBox="0 0 400 300">
+                    <rect x="50" y="50" width="300" height="200" fill="none" stroke="currentColor" stroke-width="2" rx="10"/>
+                    <rect x="70" y="70" width="260" height="30" fill="currentColor" opacity="0.3" rx="5"/>
+                    <rect x="70" y="110" width="260" height="20" fill="currentColor" opacity="0.2" rx="5"/>
+                    <rect x="70" y="140" width="260" height="20" fill="currentColor" opacity="0.2" rx="5"/>
+                    <rect x="70" y="170" width="180" height="20" fill="currentColor" opacity="0.2" rx="5"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section class="py-12 mb-12">
+    <h2 class="text-3xl font-bold text-center text-primary mb-12">Built With Modern Technologies</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- ASP.NET 8 -->
+        <div class="card bg-neutral border border-neutral-content shadow-lg hover:shadow-xl transition-shadow">
+            <div class="card-body">
+                <div class="text-4xl font-bold text-primary mb-2">.NET</div>
+                <h3 class="card-title text-lg text-white">ASP.NET 8</h3>
+                <p class="text-sm text-gray-300">Latest framework for building web applications with high performance and security.</p>
+            </div>
+        </div>
+
+        <!-- Razor Pages -->
+        <div class="card bg-neutral border border-neutral-content shadow-lg hover:shadow-xl transition-shadow">
+            <div class="card-body">
+                <div class="text-4xl font-bold text-primary mb-2">📄</div>
+                <h3 class="card-title text-lg text-white">Razor Pages</h3>
+                <p class="text-sm text-gray-300">Page-focused programming model that makes building web UIs easier and more productive.</p>
+            </div>
+        </div>
+
+        <!-- Entity Framework -->
+        <div class="card bg-neutral border border-neutral-content shadow-lg hover:shadow-xl transition-shadow">
+            <div class="card-body">
+                <div class="text-4xl font-bold text-primary mb-2">💾</div>
+                <h3 class="card-title text-lg text-white">Entity Framework</h3>
+                <p class="text-sm text-gray-300">Powerful ORM for working with databases using modern LINQ queries.</p>
+            </div>
+        </div>
+
+        <!-- Tailwind & DaisyUI -->
+        <div class="card bg-neutral border border-neutral-content shadow-lg hover:shadow-xl transition-shadow">
+            <div class="card-body">
+                <div class="text-4xl font-bold text-primary mb-2">🎨</div>
+                <h3 class="card-title text-lg text-white">Tailwind & DaisyUI</h3>
+                <p class="text-sm text-gray-300">Modern CSS framework with beautiful component library for stunning UI design.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Features -->
+<section class="py-12 bg-neutral rounded-lg px-6 md:px-12">
+    <h2 class="text-3xl font-bold text-primary mb-8">Application Features</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Product Management</h3>
+            <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Create new products with detailed information</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Edit and update existing products</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Delete products safely</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>View detailed product information</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Search and filter products</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-semibold text-white mb-4">User Experience</h3>
+            <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Responsive design for mobile and desktop</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Intuitive navigation and user interface</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Fast page loading and performance</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Accessible design for all users</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="text-primary font-bold">✓</span>
+                    <span>Modern, beautiful UI with animations</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

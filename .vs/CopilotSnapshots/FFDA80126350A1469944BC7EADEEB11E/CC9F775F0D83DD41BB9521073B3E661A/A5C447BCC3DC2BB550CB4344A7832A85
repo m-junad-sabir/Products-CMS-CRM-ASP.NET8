@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Products CMS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- DaisyUI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-base-100">
+    <header>
+        <!-- Navbar using Flowbite -->
+        <nav class="bg-neutral fixed w-full z-40 top-0 start-0 border-b border-neutral-content">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <!-- Logo and Brand -->
+                <a asp-page="/Index" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="h-7 w-7" src="~/img/logo-img.png" alt="Products CMS Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary">Products CMS</span>
+                </a>
+
+                <!-- User Menu and Mobile Toggle -->
+                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <!-- User Avatar Dropdown -->
+                    <div class="relative group">
+                        <button type="button" class="flex text-sm bg-neutral rounded-full md:me-0 focus:ring-4 focus:ring-primary transition-all" id="user-menu-button" aria-expanded="false">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="w-8 h-8 rounded-full border border-primary" src="~/img/avatar.png" alt="user photo" onerror="this.src='https://ui-avatars.com/api/?name=User&background=random'">
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div class="hidden absolute right-0 z-50 bg-neutral-focus border border-neutral-content rounded-lg shadow-xl w-48 group-hover:block" id="user-dropdown">
+                            <div class="px-4 py-3 border-b border-neutral-content">
+                                <span class="block text-sm font-medium text-base-content">John Doe</span>
+                                <span class="block text-sm text-base-content/60 truncate">user@example.com</span>
+                            </div>
+
+                            <ul class="p-2 text-sm text-base-content" aria-labelledby="user-menu-button">
+                                <li>
+                                    <a href="#" class="inline-flex items-center w-full px-3 py-2 hover:bg-neutral hover:text-primary rounded transition-colors">Edit Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inline-flex items-center w-full px-3 py-2 hover:bg-neutral hover:text-primary rounded transition-colors">Edit Role Rights</a>
+                                </li>
+                                <li class="border-t border-neutral-content">
+                                    <a href="#" class="inline-flex items-center w-full px-3 py-2 hover:bg-neutral hover:text-error rounded transition-colors">Sign Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Toggle Button -->
+                    <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-base-content rounded-lg md:hidden hover:bg-neutral focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="navbar-user" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-neutral-content rounded-lg bg-neutral md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral">
+                        <li>
+                            <a asp-page="/Index" class="block py-2 px-3 text-primary bg-transparent rounded hover:bg-neutral-focus md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 transition-colors font-semibold" aria-current="page">About Me</a>
+                        </li>
+                        <li>
+                            <a asp-page="/Products/Index" class="block py-2 px-3 text-gray-200 rounded hover:bg-neutral-focus md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 transition-colors">Products Catalog</a>
+                        </li>
+                        <li>
+                            <a asp-page="/ProductsByCategory/Index" class="block py-2 px-3 text-gray-200 rounded hover:bg-neutral-focus md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 transition-colors">Query Products</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content with top padding for fixed navbar -->
+    <main role="main" class="pt-20 px-4 md:px-0">
+        <div class="max-w-screen-xl mx-auto py-6">
+            @RenderBody()
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-content bg-neutral text-base-content mt-12">
+        <div class="max-w-screen-xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-primary mb-2">Products CMS</h3>
+                    <p class="text-sm text-base-content/70">A modern, responsive content management system built with ASP.NET 8.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-primary mb-2">Navigation</h4>
+                    <ul class="text-sm space-y-1">
+                        <li><a asp-page="/Index" class="text-gray-300 hover:text-primary transition-colors">About Me</a></li>
+                        <li><a asp-page="/Products/Index" class="text-gray-300 hover:text-primary transition-colors">Products</a></li>
+                        <li><a asp-page="/ProductsByCategory/Index" class="text-gray-300 hover:text-primary transition-colors">Query</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-primary mb-2">Legal</h4>
+                    <ul class="text-sm space-y-1">
+                        <li><a asp-page="/Privacy" class="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-content pt-4 text-center text-sm text-base-content/60">
+                &copy; 2025 Products CMS. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (required for Flowbite) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Flowbite JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    
+    <!-- Custom site scripts -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- User menu dropdown toggle script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userDropdown = document.getElementById('user-dropdown');
+            
+            if (userMenuButton && userDropdown) {
+                userMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    userDropdown.classList.toggle('hidden');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!userMenuButton.contains(e.target) && !userDropdown.contains(e.target)) {
+                        userDropdown.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
