@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|c:\\junaid\\projects_data_nespak\\practice-r-and-d-dotnet8\\productsprojectcrud\\productsprojectcrud\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}|",
-      "RelativeMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|solutionrelative:productsprojectcrud\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|c:\\junaid\\projects_data_nespak\\practice-r-and-d-dotnet8\\productsprojectcrud\\productsprojectcrud\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
-      "RelativeMoniker": "D:0:0:{84783E9D-F662-42F2-A060-EBE5FCCF664E}|ProductsProjectCRUD\\ProductsProjectCRUD.csproj|solutionrelative:productsprojectcrud\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 199,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\.gitignore",
-              "RelativeDocumentMoniker": "ProductsProjectCRUD\\.gitignore",
-              "ToolTip": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\.gitignore",
-              "RelativeToolTip": "ProductsProjectCRUD\\.gitignore",
-              "ViewState": "AgIAAMwBAAAAAAAAAAAIwNgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001407|",
-              "WhenOpened": "2026-01-30T04:30:40.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\README.md",
-              "RelativeDocumentMoniker": "ProductsProjectCRUD\\README.md",
-              "ToolTip": "C:\\junaid\\Projects_Data_Nespak\\Practice-R-and-D-dotNET8\\ProductsProjectCRUD\\ProductsProjectCRUD\\README.md",
-              "RelativeToolTip": "ProductsProjectCRUD\\README.md",
-              "ViewState": "AgIAACYBAAAAAAAAAAAAAEEGAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-30T04:28:39.559Z",
-              "EditorCaption": ""
             }
           ]
         }
