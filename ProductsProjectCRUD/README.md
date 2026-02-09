@@ -2,35 +2,39 @@
 
 A professional **ASP.NET Core 8.0 Razor Pages** application for managing products, suppliers, and categories with CRUD operations.
 
+---
+
 ## Table Of Content
 
-Overview [Link Text](#overview)
+- [Overview](#overview)
 
-Key Features [Link Text](#key-features)
+- [Key Features](#key-features)
 
-Technology Stack [Link Text](#technology-stack)
+- [Technology Stack](#technology-stack)
 
-Screenshots - DEMO [Link Text](#screenshots---demo)
+- [Screenshots - DEMO](#screenshots---demo)
 
-Project Structure [Link Text](#project-structure)
+- [Project Structure](#project-structure)
 
-Prerequisites [Link Text](#prerequisites)
+- [Prerequisites](#prerequisites)
 
-Quick Start [Link Text](#quick-start)
+- [Quick Start](#quick-start)
 
-Running the Application [Link Text](#running-the-application)
+- [Running the Application](#running-the-application)
 
-Architecture [Link Text](#architecture)
+- [Architecture](#architecture)
 
-Data Flow [Link Text](#data-flow)
+- [Data Flow](#data-flow)
 
-Database Schema [Link Text](#database-schema)
+- [Database Schema](#database-schema)
 
-Development Guidelines [Link Text](#development-guidelines)
+- [Development Guidelines](#development-guidelines)
 
-Adding Features [Link Text](#adding-features)
+- [Adding Features](#adding-features)
 
-Resources [Link Text](#resources)
+- [Resources](#resources)
+
+---
 
 ## Overview
 
@@ -41,6 +45,8 @@ Enables businesses to:
 - Track inventory levels
 - Perform CRUD operations
 - Search and filter products
+
+---
 
 ### Key Features
 
@@ -63,8 +69,8 @@ Enables businesses to:
 | Frontend | Bootstrap | 5.3.6 |
 
 ---
-## Screenshots - DEMO
 
+## Screenshots - DEMO
 
 ---
 
