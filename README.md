@@ -2,6 +2,36 @@
 
 A professional **ASP.NET Core 8.0 Razor Pages** application for managing products, suppliers, and categories with CRUD operations.
 
+## Table Of Content
+
+Overview [Link Text](#overview)
+
+Key Features [Link Text](#key-features)
+
+Technology Stack [Link Text](#technology-stack)
+
+Screenshots - DEMO [Link Text](#screenshots---demo)
+
+Project Structure [Link Text](#project-structure)
+
+Prerequisites [Link Text](#prerequisites)
+
+Quick Start [Link Text](#quick-start)
+
+Running the Application [Link Text](#running-the-application)
+
+Architecture [Link Text](#architecture)
+
+Data Flow [Link Text](#data-flow)
+
+Database Schema [Link Text](#database-schema)
+
+Development Guidelines [Link Text](#development-guidelines)
+
+Adding Features [Link Text](#adding-features)
+
+Resources [Link Text](#resources)
+
 ## Overview
 
 Enables businesses to:
@@ -31,6 +61,10 @@ Enables businesses to:
 | Data Access | ADO.NET | Microsoft.Data.SqlClient 6.0.2 |
 | Database | SQL Server | 2019+ |
 | Frontend | Bootstrap | 5.3.6 |
+
+---
+## Screenshots - DEMO
+
 
 ---
 
