@@ -72,6 +72,20 @@ Enables businesses to:
 
 ## Screenshots - DEMO
 
+### Landing Page
+
+![Landing Page](.screenshots/1.png)
+
+* This screenshot shows the UI of the Home page of the app when it is launched.
+
+### Products Catalog Page
+
+![Products](.screenshots/2.png)
+
+* This screenshot shows List of Products fetched from SQL server Database.
+
+![Products](.screenshots/3.png)
+
 ---
 
 ## Project Structure
